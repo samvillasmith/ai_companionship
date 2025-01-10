@@ -36,7 +36,7 @@ export const Sidebar = () => {
         return router.push(url);
     }
     return ( 
-        <div className="space-y-4 flex flex-col h-full text-primary bg-secondary">
+        <div className="space-y-4 flex flex-col h-full text-primary bg-background/50 dark:bg-zinc-800/50 backdrop-blur-sm">
             <div className="p-3 flex-1 flex justify-center">
                 <div className="space-y-2">
                     {routes.map((route)=>(
@@ -44,8 +44,8 @@ export const Sidebar = () => {
                             onClick={()=> onNavigate(route.href, route.pro)}
                             key={route.href}
                             className={cn(
-                                "text-muted-foreground text-xs group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-primary hover:bg-primary/10 rounded-lg transition",
-                                pathname === route.href && "bg-primary/10 text-primary"
+                                "text-muted-foreground dark:text-zinc-400 text-xs group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-primary dark:text-indigo-400/90 hover:bg-primary/10 dark:hover:bg-zinc-700/50 rounded-lg transition-all duration-200",
+                                pathname === route.href && "bg-primary/10 dark:bg-zinc-700/75 text-primary dark:text-violet-400/90"
                             )}
                         >
                             <div className="flex flex-col gap-y-2 items-center flex-1">

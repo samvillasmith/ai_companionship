@@ -7,7 +7,7 @@ const RootLayout = ({
         children: React.ReactNode;
     }) => {
     return ( 
-        <div className="h-full">
+        <div className="h-full dark:bg-zinc-900">
             <Navbar />
             <div className="hidden md:flex mt-16 w-20 flex-col fixed inset-y-0">
                 <Sidebar />
